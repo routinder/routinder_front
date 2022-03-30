@@ -25,7 +25,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "dev": "yarn build:style && next dev",
+    "dev": "next dev",
+    "dev:style": "yarn build:style && next dev",
     "start": "next start",
     "build": "yarn build:style && next build",
     "storybook": "yarn build:style && start-storybook -p 6006 -s public",
