@@ -9,7 +9,9 @@ const LoginCallback = () => {
     const sendOauthCode = async () => {
       const { code } = qs.parse(window.location.search, { ignoreQueryPrefix: true });
 
-      const { data } = await axios.post(process.env.SERVER_URL as string, { data: { code } });
+      const { data } = await axios.post(process.env.NEXT_PUBLIC_SERVER_URL as string, {
+        data: { code },
+      });
       const { token } = data;
 
       if (!token) {
